@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Mvcdb_StockModelStoreContainer" CdmEntityContainer="Mvcdb_StockEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Mvcdb_StockModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Categories">
+      <EntityTypeMapping TypeName="Mvcdb_StockModel.Tbl_Categories">
+        <MappingFragment StoreEntitySet="Tbl_Categories">
+          <ScalarProperty Name="ctg_ID" ColumnName="ctg_ID" />
+          <ScalarProperty Name="ctg_name" ColumnName="ctg_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Costumers">
+      <EntityTypeMapping TypeName="Mvcdb_StockModel.Tbl_Costumers">
+        <MappingFragment StoreEntitySet="Tbl_Costumers">
+          <ScalarProperty Name="cst_ID" ColumnName="cst_ID" />
+          <ScalarProperty Name="cst_name" ColumnName="cst_name" />
+          <ScalarProperty Name="cst_surname" ColumnName="cst_surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Products">
+      <EntityTypeMapping TypeName="Mvcdb_StockModel.Tbl_Products">
+        <MappingFragment StoreEntitySet="Tbl_Products">
+          <ScalarProperty Name="pct_ID" ColumnName="pct_ID" />
+          <ScalarProperty Name="pct_name" ColumnName="pct_name" />
+          <ScalarProperty Name="pct_brand" ColumnName="pct_brand" />
+          <ScalarProperty Name="pct_category" ColumnName="pct_category" />
+          <ScalarProperty Name="pct_price" ColumnName="pct_price" />
+          <ScalarProperty Name="pct_stock" ColumnName="pct_stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Sales">
+      <EntityTypeMapping TypeName="Mvcdb_StockModel.Tbl_Sales">
+        <MappingFragment StoreEntitySet="Tbl_Sales">
+          <ScalarProperty Name="sale_ID" ColumnName="sale_ID" />
+          <ScalarProperty Name="sale_product" ColumnName="sale_product" />
+          <ScalarProperty Name="sale_costumer" ColumnName="sale_costumer" />
+          <ScalarProperty Name="sale_quantity" ColumnName="sale_quantity" />
+          <ScalarProperty Name="sale_price" ColumnName="sale_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

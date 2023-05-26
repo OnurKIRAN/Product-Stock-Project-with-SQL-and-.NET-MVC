@@ -1,0 +1,25 @@
+﻿@model Mvc_Stock_Project.Models.Entity.Tbl_Costumers
+@{
+    ViewBag.Title = "newCostumer";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    <div>
+        <label>Costumer Name</label>
+        @Html.TextBoxFor((m => m.cst_name), new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.cst_name, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <label>Costumer Surname</label>
+        <input type="text" class="form-control" name="cst_surname" />
+    </div>
+    <div>
+        <button class="btn btn-info" id="addcst">Add Costumer</button>
+    </div>
+    <script>
+        $('#addcst').click(function () {
+            alert('New Costumer Added');
+        });
+    </script>
+</form>

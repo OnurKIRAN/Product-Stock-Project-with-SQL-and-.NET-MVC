@@ -1,0 +1,44 @@
+﻿@using Mvc_Stock_Project.Models.Entity
+@model List<Tbl_Costumers>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using (Html.BeginForm("Index", "Costumer", FormMethod.Get))
+{
+    <p>
+        <b>Costumer Name:</b> @Html.TextBox("p")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Costumer ID</th>
+        <th>Costumer Name</th>
+        <th>Costumer Surname</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Alert</th>
+
+    </tr>
+    <tbody>
+        @foreach (var cst in Model)
+        {
+            <tr>
+                <th>@cst.cst_ID</th>
+                <td>@cst.cst_name</td>
+                <td>@cst.cst_surname</td>
+                <td> <a href="/Costumer/Delete/@cst.cst_ID" class="btn btn-danger">Delete</a></td>
+                <td> <a href="/Costumer/BringCostumer/@cst.cst_ID" class="btn btn-success">Update</a></td>
+                <td>@Html.ActionLink("Delete Button", "Delete", new { id = cst.cst_ID }, new { @class = "btn btn-warning", onclick = "return confirm('Are you sure?')" })</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a href="/Costumer/newCostumer/" class="btn btn-primary">Add New Costumer</a>
+
+
+

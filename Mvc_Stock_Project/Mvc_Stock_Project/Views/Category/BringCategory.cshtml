@@ -1,0 +1,21 @@
+﻿@model Mvc_Stock_Project.Models.Entity.Tbl_Categories
+@{
+    ViewBag.Title = "BringCategory";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Bringing Category Page</h2>
+
+@using (Html.BeginForm("Update", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ctg_ID)
+        @Html.TextBoxFor(m => m.ctg_ID, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.ctg_name)
+        @Html.TextBoxFor(m => m.ctg_name, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-warning">Update Category</button>
+    </div>
+}
